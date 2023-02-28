@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Trainer } from '../models/trainer.model';
-import {StorageUtil } from '../utils/storage.util'
+import { StorageUtil } from '../utils/storage.util'
 import { StorageKeys } from '../enums/storage-keys.enum';
+import { Pokemon } from '../models/pokemon.model';
 
 @Injectable({
   providedIn: 'root'
@@ -18,11 +19,22 @@ export class TrainerService {
     StorageUtil.storageSave<Trainer>(StorageKeys.Trainer, trainer!)
     this._trainer = trainer
   }
-
   constructor() { 
     this._trainer = StorageUtil.StorageRead<Trainer>(StorageKeys.Trainer)
 
   }
-
-
+  // public isCollected(pokemonName: string): boolean{
+  //   if (this._trainer)
+  //     return Boolean(this.trainer?.pokemon.find((pokemon: Pokemon) => pokemon.name === pokemonName))
+  //   return false
+  // }
+  public addToCollection(pokemon: Pokemon): void {
+    if(this._trainer)[
+      this._trainer.pokemon.push(pokemon.name)
+    ]
+   }
+   public removeFromCollection(pokemonName:string): void{
+    if(this._trainer) return
+      // this._trainer.pokemon=this._trainer?.pokemon.filter((pokemon: Pokemon) => pokemon.name!==pokemonName)
+   }
 }

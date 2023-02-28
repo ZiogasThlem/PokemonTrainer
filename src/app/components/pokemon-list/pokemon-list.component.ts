@@ -10,6 +10,17 @@ export class PokemonListComponent implements OnInit{
 
   @Input() pokemonList: Pokemon[] = []
   
+  
+  // pagination config
+  page: number = 1
+  itemsToDisplay: number = 30
+
+  pageChanged(event: number) {
+    this.page = event
+  }
+  // pagination config end
+
+  
   constructor() { }
   ngOnInit(): void {
   }

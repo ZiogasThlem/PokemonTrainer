@@ -11,7 +11,7 @@ export class CollectButtonComponent {
 
 
   onCollectClick(): void {
-    alert("collected " + this.pokemonName +"!")
+    alert(this.pokemonName + " collected!")
   }
 
 }

@@ -18,6 +18,7 @@ export class PokemonCatalogueService {
   private _error: string = "";
   private _loading: boolean = false;
 
+
   get pokemonList(): Pokemon[] {
     return this._pokemonList
   }
@@ -47,5 +48,9 @@ export class PokemonCatalogueService {
         }
       
       })
+  }
+
+  pokemonByName(name: string): Pokemon | undefined {
+    return this._pokemonList.find((pokemon: Pokemon) => pokemon.name === name)
   }
 }

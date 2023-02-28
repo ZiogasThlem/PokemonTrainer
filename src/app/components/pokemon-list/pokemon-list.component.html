@@ -1,6 +1,7 @@
 <ul>
-    <app-pokemon-list-item *ngFor="let pokemon of pokemonList"
-    [pokemon]="pokemon">
+    <app-pokemon-list-item *ngFor="let pokemon of pokemonList | paginate: {itemsPerPage: itemsToDisplay, currentPage: page}"
+    [pokemon]="pokemon">{{pokemon}}
     </app-pokemon-list-item>
+    <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
 </ul>
 
