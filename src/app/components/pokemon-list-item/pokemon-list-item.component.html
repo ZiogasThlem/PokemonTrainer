@@ -1,0 +1,20 @@
+<li *ngIf="pokemon">
+  <img
+  src=""
+  width="50"
+  height="50"
+  [alt]="pokemon.name"
+  />
+  <span>
+    {{ pokemon.name }}
+    <button type="submit">
+      <img src="favicon.ico" alt="pokeball" width="20" height="20">
+    </button>
+  </span>
+</li>
+
+<!-- "
+  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
+  pokemon.url + 
+  '.png'
+" -->

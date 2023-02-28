@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { enviroment } from 'src/enviroments/enviroment.prod';
 import { Pokemon } from '../models/pokemon.model';
 import { RootObject } from '../models/pokemon-gathered.model';
-import { finalize } from 'rxjs';
+import { finalize, map } from 'rxjs';
 
 
 const { pokeApiUrl } = enviroment
@@ -29,14 +29,13 @@ export class PokemonCatalogueService {
   get loading(): boolean {
     return this._loading
   }
-  
+
 
   findAllPokemon(): void{
 
     this.http.get<RootObject>(pokeApiUrl)
       .pipe(
-        finalize( () => 
-        this._loading = false)
+        finalize( () => this._loading = false)
       )
       .subscribe({
         next: (root: RootObject) => {

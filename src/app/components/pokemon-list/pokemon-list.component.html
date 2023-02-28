@@ -1,6 +1,6 @@
 <ul>
-    <li *ngFor="let pokemon of pokemonList">
-        <span> {{ pokemon.name }}</span>
-    </li>
+    <app-pokemon-list-item *ngFor="let pokemon of pokemonList"
+    [pokemon]="pokemon">
+    </app-pokemon-list-item>
 </ul>
 

@@ -1,1 +1,13 @@
-<p>navbar-top works!</p>
+<nav>
+    <p>navbar-top works!</p>
+    <ng-container *ngIf="trainer != undefined">
+        <ul>
+            <li>
+                <a routerLink="/pokemon-catalogue">Pokemon Catalogue</a>
+            </li>
+            <li>
+                <a routerLink="/trainer">Trainer Page</a>
+            </li>
+        </ul>
+    </ng-container>
+</nav>
