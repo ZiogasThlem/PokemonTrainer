@@ -1,20 +1,16 @@
 <li *ngIf="pokemon">
   <img
-  src=""
-  width="50"
-  height="50"
-  [alt]="pokemon.name"
+    [src]="
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
+      (pokemon.url.length > 37 ? pokemon.url.slice(pokemon.url.length - 4 ).slice(0,3) : pokemon.url.slice(pokemon.url.length - 3 ).slice(0,2)) +
+      '.png'
+    "
+    width="60"
+    height="60"
+    [alt]=""
   />
   <span>
     {{ pokemon.name }}
-    <button type="submit">
-      <img src="favicon.ico" alt="pokeball" width="20" height="20">
-    </button>
+    <app-collect-button [pokemonName]="pokemon.name"></app-collect-button>
   </span>
 </li>
-
-<!-- "
-  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' +
-  pokemon.url + 
-  '.png'
-" -->

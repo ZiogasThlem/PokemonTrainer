@@ -16,7 +16,7 @@ export class TrainerService {
 
   set trainer(trainer: Trainer | undefined) {
     StorageUtil.storageSave<Trainer>(StorageKeys.Trainer, trainer!)
-    this._trainer = this.trainer
+    this._trainer = trainer
   }
 
   constructor() { 
