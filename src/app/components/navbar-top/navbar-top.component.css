@@ -6,9 +6,11 @@ li {
     text-decoration: none;
     display: inline-block;
     margin-left: 15px;
+    margin-top: 8%;
 }
 nav {
     display: flex;
     justify-content: space-around;
+    background-color: aqua;
     margin-bottom: 5%;
 }

@@ -1,5 +1,6 @@
-p {
-    font-family: 'Pokemon Solid', sans-serif;
-    font-size: 35px;
-    margin-top: 10%;
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: aqua;
 }
