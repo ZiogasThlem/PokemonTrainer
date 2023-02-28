@@ -1,1 +1,4 @@
-<p>pokemon-catalogue works!</p>
+<main class="container-fluid">
+    <p *ngIf="loading">Retrieving Pokemon...</p>
+    <app-pokemon-list [pokemonList]="pokemonList"></app-pokemon-list>
+</main>

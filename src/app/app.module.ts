@@ -11,6 +11,8 @@ import { TrainerPage } from './pages/trainer/trainer.page';
 import { NavbarTopComponent } from './components/navbar-top/navbar-top.component';
 import { NavbarBottomComponent } from './components/navbar-bottom/navbar-bottom.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
+import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     TrainerPage,
     NavbarTopComponent,
     NavbarBottomComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    PokemonListComponent,
+    PokemonListItemComponent
   ],
   imports: [
     HttpClientModule,
