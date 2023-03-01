@@ -1,6 +1,13 @@
 ul {
     list-style-type: none;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    -webkit-column-count: 3;  /* Chrome/Opera, Safari */
+    -moz-column-count: 3; /* Mozilla Firefox */
     column-count: 3;
+}
+pagination-controls{ 
+    display: flex;
+    margin-bottom: 5%;
+    justify-content: space-around;
 }

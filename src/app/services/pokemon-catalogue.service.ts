@@ -33,7 +33,10 @@ export class PokemonCatalogueService {
 
 
   findAllPokemon(): void{
-
+    if (this._pokemonList.length > 0 || this.loading) {
+      return
+    }
+    this._loading = true
     this.http.get<RootObject>(pokeApiUrl)
       .pipe(
         finalize( () => this._loading = false)
