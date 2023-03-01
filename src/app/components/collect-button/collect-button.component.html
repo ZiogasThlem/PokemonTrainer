@@ -1,10 +1,11 @@
 <span>
   <button (click)="onCollectClick()">
     <span *ngIf="isCollected; then collected; else notCollected"></span>
-    Collect
     <ng-template #collected>
-      <img src="assets/masterball.png" alt="pokeball" width="20" height="20"/>
+      <img src="assets/masterball.png" alt="pokeball" width="90" height="70" />
     </ng-template>
-    <ng-template #notCollected></ng-template>
+    <ng-template #notCollected
+      ><img src="assets/pokeball.png" alt="pokeball" width="90" height="70"
+    /></ng-template>
   </button>
 </span>
