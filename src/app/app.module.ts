@@ -15,6 +15,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
 import { CollectButtonComponent } from './components/collect-button/collect-button.component';
+import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CollectButtonComponent } from './components/collect-button/collect-butt
     LoginFormComponent,
     PokemonListComponent,
     PokemonListItemComponent,
-    CollectButtonComponent
+    CollectButtonComponent,
+    LogoutButtonComponent
   ],
   imports: [
     HttpClientModule,

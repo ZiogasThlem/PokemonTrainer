@@ -3,5 +3,5 @@
     [pokemon]="pokemon">{{pokemon}}
     </app-pokemon-list-item>
 </ul>
-<pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+<pagination-controls (pageChange)="pageChanged($event)" *ngIf="pokemonList.length>30"></pagination-controls>
 

@@ -20,7 +20,7 @@ export class TrainerService {
     this._trainer = trainer
   }
   constructor() { 
-    this._trainer = StorageUtil.StorageRead<Trainer>(StorageKeys.Trainer)
+    this._trainer = StorageUtil.storageRead<Trainer>(StorageKeys.Trainer)
 
   }
   public isInCollection(pokemonName: string): boolean{
