@@ -11,6 +11,6 @@ li {
 nav {
     display: flex;
     justify-content: space-around;
-    background-color: aqua;
+    background-color: #27CAFD;
     margin-bottom: 5%;
 }

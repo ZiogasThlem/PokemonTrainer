@@ -16,6 +16,7 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { PokemonListItemComponent } from './components/pokemon-list-item/pokemon-list-item.component';
 import { CollectButtonComponent } from './components/collect-button/collect-button.component';
 import { LogoutButtonComponent } from './components/logout-button/logout-button.component';
+import { LoginHeaderComponent } from './components/login-header/login-header.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LogoutButtonComponent } from './components/logout-button/logout-button.
     PokemonListComponent,
     PokemonListItemComponent,
     CollectButtonComponent,
-    LogoutButtonComponent
+    LogoutButtonComponent,
+    LoginHeaderComponent
   ],
   imports: [
     HttpClientModule,

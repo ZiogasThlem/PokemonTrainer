@@ -1,6 +1,9 @@
 <nav>
-    <p>"username" Trainer's Profile</p>
+    <ng-container *ngIf="trainer === undefined">
+        <app-login-header></app-login-header>
+    </ng-container>
     <ng-container *ngIf="trainer != undefined">
+        <p>Trainer {{trainer.username}}'s Profile</p>
         <ul>
             <li>
                 <a routerLink="/pokemon-catalogue">Pokemon Catalogue</a>

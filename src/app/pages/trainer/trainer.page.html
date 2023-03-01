@@ -1,9 +1,16 @@
-<header>
-    <h1>
-        Trainer's username Pokemon Colection
-    </h1>
-</header>
+
 <main>
-    <app-pokemon-list [pokemonList]="collection"></app-pokemon-list>
+    <ng-container *ngIf="collection.length===0">
+        <p>Looks like you haven't collected any pokemon yet...</p>
+        <p>That's okay!</p>
+        <a routerLink="/pokemon-catalogue"><img src="assets/pokeball.png" width="300"/></a>
+        <p>Click the Pokeball above and go catch 'em all!</p>
+    </ng-container>
+    <ng-container *ngIf="collection.length>0">
+        <p>
+            Trainer's {{trainer?.username}} Pokemon Colection
+        </p>
+        <app-pokemon-list [pokemonList]="collection"></app-pokemon-list>
+    </ng-container>
     <app-logout-button></app-logout-button>
 </main>
