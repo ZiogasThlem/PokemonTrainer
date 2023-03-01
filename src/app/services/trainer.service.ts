@@ -23,18 +23,18 @@ export class TrainerService {
     this._trainer = StorageUtil.StorageRead<Trainer>(StorageKeys.Trainer)
 
   }
-  // public isCollected(pokemonName: string): boolean{
-  //   if (this._trainer)
-  //     return Boolean(this.trainer?.pokemon.find((pokemon: Pokemon) => pokemon.name === pokemonName))
-  //   return false
-  // }
-  public addToCollection(pokemon: Pokemon): void {
+  public isInCollection(pokemonName: string): boolean{
+    if (this._trainer)
+      return Boolean(this.trainer?.pokemon.find((pokemonObjName: string) => pokemonObjName === pokemonName))
+    return false
+  }
+  public addToCollection(pokemonName: string): void {
     if(this._trainer)[
-      this._trainer.pokemon.push(pokemon.name)
+      this._trainer.pokemon.push(pokemonName)
     ]
    }
    public removeFromCollection(pokemonName:string): void{
-    if(this._trainer) return
-      // this._trainer.pokemon=this._trainer?.pokemon.filter((pokemon: Pokemon) => pokemon.name!==pokemonName)
+    if(!this._trainer) return
+    this._trainer.pokemon = this._trainer?.pokemon.filter((pokemonObjName: string) => pokemonObjName != pokemonName)
    }
 }
