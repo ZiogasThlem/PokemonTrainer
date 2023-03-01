@@ -5,7 +5,9 @@ import { Pokemon } from 'src/app/models/pokemon.model';
 @Component({
   selector: 'app-pokemon-list-item',
   templateUrl: './pokemon-list-item.component.html',
-  styleUrls: ['./pokemon-list-item.component.css']
+  styles: [`span {
+              font-size: 35px;
+          }`]
 })
 export class PokemonListItemComponent {
 

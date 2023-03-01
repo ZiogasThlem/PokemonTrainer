@@ -11,11 +11,9 @@ import { TrainerService } from 'src/app/services/trainer.service';
 })
 export class CollectButtonComponent implements OnInit{
 
-  public isCollected: boolean = false
-
   @Input() pokemonName: string = ""
-  
-  public loading: boolean = false
+  public isCollected: boolean = false
+  public loading: boolean = false 
 
 
 
@@ -38,7 +36,7 @@ export class CollectButtonComponent implements OnInit{
           this.isCollected = this.trainerService.isInCollection(this.pokemonName)
         },
         error: (error: HttpErrorResponse) => {
-
+          console.error(error)
         }
       })
   }
