@@ -25,16 +25,16 @@ export class TrainerService {
   }
   public isInCollection(pokemonName: string): boolean{
     if (this._trainer)
-      return Boolean(this.trainer?.pokemon.find((pokemonObjName: string) => pokemonObjName === pokemonName))
+      return Boolean(this.trainer?.pokemon.find((pokemon: Pokemon) => pokemon.name === pokemonName))
     return false
   }
-  public addToCollection(pokemonName: string): void {
+  public addToCollection(pokemon: Pokemon): void {
     if(this._trainer)[
-      this._trainer.pokemon.push(pokemonName)
+      this._trainer.pokemon.push(pokemon)
     ]
    }
-   public removeFromCollection(pokemonName:string): void{
+  public removeFromCollection(pokemonName:string): void{
     if(!this._trainer) return
-    this._trainer.pokemon = this._trainer?.pokemon.filter((pokemonObjName: string) => pokemonObjName != pokemonName)
+    this._trainer.pokemon = this._trainer?.pokemon.filter((pokemon: Pokemon) => pokemon.name != pokemonName)
    }
 }

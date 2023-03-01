@@ -34,7 +34,7 @@ export class CollectionService {
     if (this.trainerService.isInCollection(pokemonName)) {
       this.trainerService.removeFromCollection(pokemonName)  
     }else {
-      this.trainerService.addToCollection(pokemonName)
+      this.trainerService.addToCollection(pokemon)
     }
 
     const headers = new HttpHeaders({

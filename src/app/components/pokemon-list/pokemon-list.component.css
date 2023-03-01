@@ -5,6 +5,7 @@ ul {
     -webkit-column-count: 3;  /* Chrome/Opera, Safari */
     -moz-column-count: 3; /* Mozilla Firefox */
     column-count: 3;
+    padding: 0% 10%;
 }
 pagination-controls{ 
     display: flex;

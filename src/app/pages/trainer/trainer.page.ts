@@ -14,12 +14,12 @@ export class TrainerPage {
     return this.trainerService.trainer
   }
 
-  // get collection(): Pokemon[] {
-  //   if (this.trainerService.trainer){
-  //     return this.trainerService.trainer?.pokemon
-  //   }
-  //   return []
-  // }
+  get collection(): Pokemon[] {
+    if (this.trainerService.trainer){
+      return this.trainerService.trainer?.pokemon
+    }
+    return []
+  }
 
   constructor(
     private trainerService: TrainerService

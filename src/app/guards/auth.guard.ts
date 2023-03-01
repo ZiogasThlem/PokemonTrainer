@@ -28,7 +28,7 @@ export class AuthGuard {
       if (this.traierService.trainer) {
         return true;
       } else {
-        // redirects to login page if user doesn't exist in session storage
+        // redirects to login page if trainer doesn't exist in session storage
         this.router.navigateByUrl('/login');
         return false;
       }

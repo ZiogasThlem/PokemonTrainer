@@ -1,8 +1,10 @@
 <span>
-    <button (click)="onCollectClick()">
-        <img src="favicon.ico" alt="pokeball" width="20" height="20" />
-        <span *ngIf="isCollected; then collected else notCollected "></span>
-        <ng-template #collected>collected</ng-template>
-        <ng-template #notCollected>notCollected</ng-template>
-    </button>
+  <button (click)="onCollectClick()">
+    <span *ngIf="isCollected; then collected; else notCollected"></span>
+    Collect
+    <ng-template #collected>
+      <img src="favicon.ico" alt="pokeball" width="20" height="20"/>
+    </ng-template>
+    <ng-template #notCollected></ng-template>
+  </button>
 </span>
