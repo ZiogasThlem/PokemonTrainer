@@ -1,7 +1,14 @@
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
 form {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    margin-top: 5%;
 }
 button {
     display: inline-block;
@@ -13,5 +20,9 @@ fieldset {
     flex-direction: column;
 }
 label {
-    font-size: 25px;
+    font-size: 20px;
+}
+h1 {
+    font-size: 65px;
+    font-family: "Pokemon Solid", sans-serif;
 }

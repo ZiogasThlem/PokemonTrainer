@@ -1,13 +1,15 @@
 nav {
+    display: flex;
     background-color:#27CAFD;
 }
 p {
     display: inline-block;
     font-family:'Pokemon Solid', sans-serif;
     font-size: 55px;
+    padding-right: 100px;
 }
 img {
-    width: 75px;
-    height: 75px;
+    width: 105px;
+    height: 105px;
     display: inline-block;
 }
