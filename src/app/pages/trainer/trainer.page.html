@@ -3,7 +3,9 @@
     <ng-container *ngIf="collection.length===0">
         <p>Looks like you haven't collected any pokemon yet...</p>
         <p>That's okay!</p>
-        <a routerLink="/pokemon-catalogue"><img src="assets/pokeball.png" width="300"/></a>
+        <a routerLink="/pokemon-catalogue"><img 
+            data-toggle="tooltip" data-placement="top" title= "Gotta catch 'em all!"
+            src="assets/pokeball.png" width="300"/></a>
         <p>Click the Pokeball above and go catch 'em all!</p>
     </ng-container>
     <ng-container *ngIf="collection.length>0">
