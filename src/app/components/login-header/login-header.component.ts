@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-login-header',
   template: ` <nav>
                 <p>Gotta catch 'em all!</p>
-                <img src="assets/pokemon-team.png"/>
+                <img src="assets/project-images/pokemon-team.png"/>
               </nav>`,
   styleUrls: ['./login-header.component.css']
 })
