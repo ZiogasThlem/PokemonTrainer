@@ -9,7 +9,14 @@ import { Pokemon } from 'src/app/models/pokemon.model';
 export class PokemonListComponent implements OnInit{
 
   @Input() pokemonList: Pokemon[] = []
-  
+
+  private _activePagination: boolean = true
+  get activePagination(): boolean{
+    return this._activePagination
+  }
+  set activePagination(pagination: boolean) {
+    this._activePagination = pagination
+  }
   
   // configuring pagination by
   // starting from page the 1st page
@@ -21,6 +28,16 @@ export class PokemonListComponent implements OnInit{
     this.page = event
   }
   // pagination config end
+
+  tooglePagination():void {
+    if (this._activePagination){
+      this.activePagination = false
+      return
+    }
+    this.activePagination = true
+    return
+
+  }
 
   ngOnInit(): void {
   }

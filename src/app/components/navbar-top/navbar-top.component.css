@@ -1,19 +1,19 @@
 p {
   font-family: "Pokemon Solid", sans-serif;
   font-size: 35px;
+  margin-bottom: 1.5%;
 }
 li {
   text-decoration: none;
   display: inline-block;
-  margin-top: 8%;
+  margin-top: 3%;
   padding-left: 65px;
-  
+  font-style: italic;
 }
 nav {
   display: flex;
   justify-content: space-around;
-  background-color: #27cafd;
-  margin-bottom: 5%;
+  background-image: linear-gradient(rgb(36, 177, 247),#27cafd,white);
 }
 nav a {
     color: #000;

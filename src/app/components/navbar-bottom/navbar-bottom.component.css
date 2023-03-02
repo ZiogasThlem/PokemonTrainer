@@ -2,8 +2,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: #27CAFD;
+    background-image: linear-gradient(white,#27cafd,rgb(36, 177, 247));
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+p {
+    margin-top: 1.5%;
 }

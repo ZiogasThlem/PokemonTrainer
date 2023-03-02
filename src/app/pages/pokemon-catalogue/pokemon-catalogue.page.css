@@ -9,6 +9,10 @@ header {
     font-family:'Pokemon Solid', sans-serif;
     margin-bottom: 2%;
   }
+h1 {
+  font-family:'Pokemon Solid', sans-serif;
+  margin-bottom: 2%;
+}
 div {
     display: flex;
     justify-content: space-between;
