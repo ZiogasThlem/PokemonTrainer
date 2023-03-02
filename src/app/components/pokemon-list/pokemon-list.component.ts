@@ -11,7 +11,9 @@ export class PokemonListComponent implements OnInit{
   @Input() pokemonList: Pokemon[] = []
   
   
-  // pagination config
+  // configuring pagination by
+  // starting from page the 1st page
+  // and displaying 15 pokemon per page
   page: number = 1
   itemsToDisplay: number = 15
 
@@ -20,8 +22,6 @@ export class PokemonListComponent implements OnInit{
   }
   // pagination config end
 
-  
-  constructor() { }
   ngOnInit(): void {
   }
   

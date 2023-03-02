@@ -18,6 +18,9 @@ export class LogoutButtonComponent {
     private readonly router: Router
   ){ }
 
+  // deletes the current trainer's key from session storage
+  // and reloads the page. Since no trainer is registered in
+  // session storage, the user is redirected to the login page
   public handleLogout():void{
     if (window.confirm("Are you sure you want to logout?")) {
       StorageUtil.storageDelete(StorageKeys.Trainer)

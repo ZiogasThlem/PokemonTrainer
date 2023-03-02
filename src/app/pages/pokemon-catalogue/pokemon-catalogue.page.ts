@@ -4,14 +4,8 @@ import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.serv
 
 @Component({
   selector: 'app-pokemon-catalogue',
-  template: `<main class="container-fluid">
-               <app-pokemon-list [pokemonList]="pokemonList">
-               </app-pokemon-list>
-             </main>`,
-  styles: [`main {
-              display: flex;
-              justify-content: space-between;
-            }`]
+  templateUrl: 'pokemon-catalogue.page.html',
+  styleUrls: ['pokemon-catalogue.page.css']
 })
 export class PokemonCataloguePage implements OnInit{
 

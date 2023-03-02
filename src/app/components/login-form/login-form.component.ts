@@ -22,6 +22,8 @@ export class LoginFormComponent {
 
     const { username } = loginForm.value
 
+    // receives a valid username entry and outputs
+    // the result to the login-page page-type component
     this.loginService.login(username)
       .subscribe(
         {
