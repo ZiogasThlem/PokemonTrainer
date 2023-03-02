@@ -4,16 +4,19 @@ import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.serv
 
 @Component({
   selector: 'app-pokemon-catalogue',
-  templateUrl: './pokemon-catalogue.page.html',
-  styleUrls: ['./pokemon-catalogue.page.css']
+  template: `<main class="container-fluid">
+               <app-pokemon-list [pokemonList]="pokemonList">
+               </app-pokemon-list>
+             </main>`,
+  styles: [`main {
+              display: flex;
+              justify-content: space-between;
+            }`]
 })
 export class PokemonCataloguePage implements OnInit{
 
   get pokemonList(): Pokemon[]{
     return this.pokemonCatalogueService.pokemonList
-  }
-  get loading(): boolean {
-    return this.pokemonCatalogueService.loading
   }
   get error(): string {
     return this.pokemonCatalogueService.error
@@ -24,6 +27,8 @@ export class PokemonCataloguePage implements OnInit{
     ) { }
 
     ngOnInit(): void {
+      // load pokemon list each time user navigates
+      // to this page
       this.pokemonCatalogueService.findAllPokemon()
     }
 

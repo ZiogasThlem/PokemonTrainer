@@ -17,6 +17,9 @@ export class AuthGuard {
     private readonly router: Router,
     private readonly traierService: TrainerService
   ) {}
+
+  // redirects user to login page if trainer
+  // doesn't exist in session storage
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -28,7 +31,6 @@ export class AuthGuard {
       if (this.traierService.trainer) {
         return true;
       } else {
-        // redirects to login page if trainer doesn't exist in session storage
         this.router.navigateByUrl('/login');
         return false;
       }

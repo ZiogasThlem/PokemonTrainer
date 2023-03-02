@@ -26,12 +26,12 @@ export class CollectButtonComponent implements OnInit{
     this.isCollected = this.trainerService.isInCollection(this.pokemonName)
   }
 
-
+// 
   onCollectClick(): void {
     this.loading = true
     this.collectionService.collect(this.pokemonName)
       .subscribe({
-        next: (response: Trainer) => {
+        next: (trainer: Trainer) => {
           this.loading = false
           this.isCollected = this.trainerService.isInCollection(this.pokemonName)
         },

@@ -6,10 +6,14 @@
         <p>Trainer {{trainer.username}}'s Profile</p>
         <ul>
             <li>
-                <a routerLink="/pokemon-catalogue">Pokemon Catalogue</a>
+                <a 
+                data-toggle="tooltip" data-placement="top" title= "Go back and catch some Pokemon!"
+                routerLink="/pokemon-catalogue">Pokemon Catalogue</a>
             </li>
             <li>
-                <a routerLink="/trainer">Trainer Page</a>
+                <a 
+                data-toggle="tooltip" data-placement="top" title= "See your Pokemon collection!"
+                routerLink="/trainer">Trainer Page</a>
             </li>
         </ul>
     </ng-container>

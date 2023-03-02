@@ -9,11 +9,18 @@ import { TrainerService } from 'src/app/services/trainer.service';
   styleUrls: ['./trainer.page.css']
 })
 export class TrainerPage {
+  
+  constructor(
+    private trainerService: TrainerService
+  ) { }
 
   get trainer(): Trainer | undefined {
     return this.trainerService.trainer
   }
 
+  // loads trainer's current collection,
+  // returns empty array if they haven't
+  // collected any pokemon yet
   get collection(): Pokemon[] {
     if (this.trainerService.trainer){
       return this.trainerService.trainer?.pokemon
@@ -21,8 +28,4 @@ export class TrainerPage {
     return []
   }
 
-  constructor(
-    private trainerService: TrainerService
-  ) { }
-  
 }

@@ -16,8 +16,6 @@ export class PokemonCatalogueService {
 
   private _pokemonList: Pokemon[] = [];
   private _error: string = "";
-  private _loading: boolean = false;
-
 
   get pokemonList(): Pokemon[] {
     return this._pokemonList
@@ -27,32 +25,29 @@ export class PokemonCatalogueService {
     return this._error
   }
 
-  get loading(): boolean {
-    return this._loading
-  }
 
+  // "fetching" all pokemon from the PokeAPI,
+  // and stores them to an Pokemon type array
+  public findAllPokemon(): void{
 
-  findAllPokemon(): void{
-    if (this._pokemonList.length > 0 || this.loading) {
-      return
-    }
-    this._loading = true
+    // since pokemonList's length is greater than zero,
+    // it means that the request to the API has already been
+    // done, so function ends here
+    if (this._pokemonList.length > 0) return
+    
     this.http.get<RootObject>(pokeApiUrl)
-      .pipe(
-        finalize( () => this._loading = false)
-      )
       .subscribe({
         next: (root: RootObject) => {
           this._pokemonList = root.results
-        }
-        ,
+        },
         error: (error: HttpErrorResponse) => {
           this._error = error.message
         }
-      
       })
   }
 
+  // getting a pokemon by it's "name" field.
+  // Used for validation
   pokemonByName(name: string): Pokemon | undefined {
     return this._pokemonList.find((pokemon: Pokemon) => pokemon.name === name)
   }

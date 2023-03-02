@@ -12,7 +12,11 @@ export class AppComponent implements OnInit{
     private readonly trainerService: TrainerService,
     private readonly pokemonCatalogueService: PokemonCatalogueService
   ) { }
+
   ngOnInit(): void {
-    if (this.trainerService.trainer) this.pokemonCatalogueService.findAllPokemon()
+    // loads the API generated pokemon list when
+    // application starts and a trainer exists
+    if (this.trainerService.trainer) 
+      this.pokemonCatalogueService.findAllPokemon()
   }
 }

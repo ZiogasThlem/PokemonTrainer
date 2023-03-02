@@ -13,7 +13,7 @@ export class PokemonListComponent implements OnInit{
   
   // pagination config
   page: number = 1
-  itemsToDisplay: number = 30
+  itemsToDisplay: number = 15
 
   pageChanged(event: number) {
     this.page = event
