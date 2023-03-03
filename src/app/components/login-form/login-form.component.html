@@ -5,15 +5,9 @@
             <label for="username">Enter a username and start your journey!</label>
             <input type="text" ngModel #username="ngModel"
             class="form-control form-control-lg"
-            required minlength="3" maxlength="15" pattern="[a-zA-Z][a-zA-Z ]+"
             name="username" id="username" placeholder="Ash Ketchup">
         </fieldset>
         <button type="submit"
         class="btn btn-primary btn-block active">Login</button>
     </form>
-    <span *ngIf="username.errors && (username.dirty || username.touched)" class="font-color bg-white">
-        <p *ngIf="username.errors?.['required']">🚫Username is required🚫</p>
-        <p *ngIf="username.errors?.['minlength']">🚫Username is too short🚫</p>
-        <p *ngIf="username.errors?.['pattern']">🚫Invalid character in username🚫</p>
-    </span>
 </main>
