@@ -70,6 +70,13 @@
                 }
               ],
               "outputHashing": "all"
+              ,
+              "fileReplacements": [
+                {
+                  "replace": "src/enviroments/environment.ts",
+                  "with": "src/enviroments/environment.prod.ts"
+                }
+              ]
             },
             "development": {
               "buildOptimizer": false,
