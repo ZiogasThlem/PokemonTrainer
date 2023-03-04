@@ -4,10 +4,16 @@
         <fieldset>
             <label for="username">Enter a username and start your journey!</label>
             <input type="text" ngModel #username="ngModel"
+            required pattern="[a-zA-Z][a-zA-Z ]+" minlength="3"
             class="form-control form-control-lg"
             name="username" id="username" placeholder="Ash Ketchup">
         </fieldset>
-        <button type="submit"
+        <button type="submit" [disabled]="loginForm.form.invalid"
         class="btn btn-primary btn-block active">Login</button>
     </form>
+    <div *ngIf="username.errors && (username.dirty || username.touched)" class="font-color bg-white">
+        <p *ngIf="username.errors?.['required']">Username is required</p>
+        <p *ngIf="username.errors?.['minlength']">Username is too short</p>
+        <p *ngIf="username.errors?.['pattern']">Invalid character in username</p>
+    </div>
 </main>
